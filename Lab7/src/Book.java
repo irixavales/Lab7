@@ -1,5 +1,5 @@
 
-public class Book implements GameThing{
+public class Book implements GameThing, Readable, Openable{
 
 	private boolean isOpen = false;
 	
@@ -7,10 +7,18 @@ public class Book implements GameThing{
 		return "A dusty old book";
 		}
 	public String getDescription() {
-		return "This book appears to be old and dusty. It's also quite heavy.";
+		String description = "This book appears to be old and dusty. It's also quite heavy.";
+		if (isOpen) {description+="The book is open.";}
+		else {description+="The book is closed.";}
+		return description;
 	}
 	public void read() {
-		System.out.println("The book seems to be written in an unknown language.");
+		if(isOpen) {
+			System.out.println("The book seems to be written in an unknown language.");
+		}
+		else {
+			System.out.println("I can't read closed books!");
+		}
 	}
 	public void open() {
 		if(isOpen) {
