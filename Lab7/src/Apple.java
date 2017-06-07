@@ -2,7 +2,7 @@
 public class Apple implements GameThing, Edible{
 	
 	public String getName() {
-		return "Apple";
+		return "An apple";
 	}
 	public String getDescription() {
 		return "A red apple that appears to be rotten.";
