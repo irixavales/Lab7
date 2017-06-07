@@ -8,7 +8,8 @@ public class Sign implements GameThing
 	{
 		return "This is a small wooden sign. There seems to be some partially faded writing in it.";
 	}
-	public void read() {
+	public void read() 
+	{
 		System.out.print("You can see the following message: \"John was here!\"");
 	}
 }
